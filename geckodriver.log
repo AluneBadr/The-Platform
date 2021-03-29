@@ -1,0 +1,27 @@
+1616361379142	geckodriver	INFO	Listening on 127.0.0.1:58425
+1616361803782	geckodriver	INFO	Listening on 127.0.0.1:58616
+1616362388825	geckodriver	INFO	Listening on 127.0.0.1:58897
+1616362392010	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\W-book\\AppData\\Local\\Temp\\rust_mozprofiledy5dlC"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616362398380	Marionette	INFO	Listening on port 58906
+1616362398524	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdn.welcometothejungle.co/wttj-front/production/assets/vendor-react-hook-form-24c3b66e60ea27dcb591.js, line 2: TypeError: e is not iterable
+JavaScript error: https://cdn.welcometothejungle.co/wttj-front/production/assets/vendor-react-hook-form-24c3b66e60ea27dcb591.js, line 2: TypeError: e is not iterable
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+[Parent 6504, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1616445732643	Marionette	INFO	Stopped listening on port 58906
+headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616362987002	Marionette	INFO	Listening on port 59321
+1616362987203	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+Exiting due to channel error.
