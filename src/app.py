@@ -80,6 +80,13 @@ head_message_temp ="""
 	<h6>Post Date: {}</h6>
 	</div>
 	"""
+
+button_temp ="""
+	<form action="{}"> <input type="submit" value=" Apply " /> </form>
+
+	"""
+
+
 full_message_temp ="""
 	<p style="text-align:justify;color:black;white-space:pre-line;padding:10px">{}</p>
 
@@ -105,27 +112,28 @@ def view_jobs_1_arg(col1,val1):
 	return data
 
 def Display(data):
-    j=0
-    for i, row in data.iterrows():
-        j+=1
-        b_company = row['company']
-        b_title = row['job_title']
-        b_desc = "  -*-   ".join( i for i in eval(row['Describtion']))
-        b_im = row['im']
-        b_post_date = row['date']
-        b_text = row['text']
-        b_link = row['joblink']
-        b_post = row['postuler']
-        st.markdown(title_temp.format(b_link,b_company,b_title,b_im,b_desc,b_post_date),unsafe_allow_html=True)
-        col1,col2 = st.beta_columns([10,1])
-        with col1:
-            if st.button("Describtion", key=j):
-                st.markdown(full_message_temp.format(b_text),unsafe_allow_html=True)
-                if st.checkbox('hide',key=j):
-                    st.markdown(full_message_temp.format(' '),unsafe_allow_html=True)
-        with col2:
-            if st.button("Apply", key=j):
-                webbrowser.open_new_tab(b_post)
+	j=0
+	for i, row in data.iterrows():
+		j+=1
+		b_company = row['company']
+		b_title = row['job_title']
+		b_desc = "  -*-   ".join( i for i in eval(row['Describtion']))
+		b_im = row['im']
+		b_post_date = row['date']
+		b_text = row['text']
+		b_link = row['joblink']
+		b_post = row['postuler']
+		st.markdown(title_temp.format(b_link,b_company,b_title,b_im,b_desc,b_post_date),unsafe_allow_html=True)
+		col1,col2 = st.beta_columns([12,1])
+		with col1:
+			if st.button("Describtion", key=j):
+				st.markdown(full_message_temp.format(b_text),unsafe_allow_html=True)
+				if st.checkbox('hide',key=j):
+					st.markdown(full_message_temp.format(' '),unsafe_allow_html=True)
+		with col2:
+			st.markdown(button_temp.format(b_post),unsafe_allow_html=True)
+            #if st.button("Apply", key=j):
+                #webbrowser.open_new_tab(b_post)
 
 def main():
 
