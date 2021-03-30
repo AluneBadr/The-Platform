@@ -144,9 +144,6 @@ def main():
 	"""
 	st.markdown(html_temp.format('white'),unsafe_allow_html=True)
 
-	st.write('\n')
-	st.write('\n')
-	st.write('\n')
 	jobs = ["Data Scientist","Data Analyst", "Data Engineer"," "]
 	jb = st.sidebar.selectbox("What job do you search ?",jobs)
 
@@ -176,7 +173,7 @@ def main():
 	if st.sidebar.checkbox('sort by date'):
 		result = result.sort_values(['date'], ascending=False)
 
-
+	st.success('{} posts found ! '.format(len(result)))
 	if len(result) >= 30:
 		exact_page_nb = len(result) / 30
         #print("- Exact number of pages to be crawled : {}" .format(exact_page_nb))
@@ -197,7 +194,10 @@ def main():
 		Display(result)
 
 	if st.sidebar.button("Refresh !", key=200):
-		exec(open("./src/update.py").read())
+		try:
+			exec(open("./src/update.py").read())
+		except:
+			st.write("ERROR 503 :(")
 
 	l_upd = max(pd.read_sql_query("SELECT * FROM jobtable", conn).date.unique())
 	st.sidebar.success("Last Update : {}".format(l_upd))
