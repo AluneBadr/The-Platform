@@ -188,8 +188,12 @@ def main():
 	else:
 		Display(result)
 
+	if st.sidebar.button("Refresh !", key=200):
+		exec(open("./src/update.py").read())
+
 	l_upd = max(pd.read_sql_query("SELECT * FROM jobtable", conn).date.unique())
 	st.sidebar.success("Last Update : {}".format(l_upd))
+
 	# st.sidebar.subheader('Get new Publications : ')
 	# Websites = ["Welc. to the jug.","Paris Job" ]
 	# ws = st.sidebar.selectbox("From",Websites)
