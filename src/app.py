@@ -82,7 +82,7 @@ head_message_temp ="""
 	"""
 
 button_temp ="""
-	<form action="{}"> <input type="submit" value=" Apply " /> </form>
+	<form action="{}" target="_blank"> <input type="submit" value=" Apply " /> </form>
 
 	"""
 
