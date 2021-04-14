@@ -6,7 +6,7 @@ The database will will be updated twice a day.
 
 very useful for someone looking for job/traineeship... in data science/engineer/analyst.
 
-you cat get it here : https://the-platform-app.herokuapp.com/
+you can get it here : https://the-platform-app.herokuapp.com/
 Just refresh the app to get new posts. 
 
 Techno : #selenium, #sqlite, #streamlit, #heroku, #html
